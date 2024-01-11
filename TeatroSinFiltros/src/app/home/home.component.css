@@ -34,7 +34,7 @@
     flex-wrap: wrap;
     gap: 20px;
   }
-  
+   
   .custom-spacing {
     margin-top: 2rem; /* Espacio superior */
     margin-bottom: 2rem; /* Espacio inferior */
