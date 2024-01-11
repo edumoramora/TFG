@@ -1,0 +1,30 @@
+<main>
+  <div class="container">
+    <h1 class="text-center">Entradas para Funciones de Teatro</h1>
+    <p class="text-center">Disfruta de las mejores representaciones en el Teatro Local</p>
+    <br>
+    <br>
+    <div class="show-cards-container">
+      <div *ngFor="let show of shows">
+
+        <app-show-card [showImageUrl]="show.imagen_url"
+                       [bookingUrl]="show.booking_url"
+                       [showDescription]="show.descripcion">
+        </app-show-card>
+
+        <div *ngIf="isUserAdmin" class="admin-buttons">
+          <button class="btn btn-warning" (click)="handleEdit(shows)">Modificar</button>
+          <button class="btn btn-danger" (click)="handleDelete(shows)">Eliminar</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div routerLink="/add-obra" class="text-center custom-spacing" *ngIf="isUserAdmin">
+    <button class="btn btn-success custom-btn-size">
+      Añadir Obra
+    </button>
+  </div>
+
+</main>
