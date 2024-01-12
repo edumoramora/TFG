@@ -1,6 +1,6 @@
 const request = require('supertest');
 const app = require('../backend/server'); 
-
+ 
 describe('API de obras', () => {
   it('debe crear una nueva obra y devolver un mensaje de éxito', async () => {
     const nuevaObra = {
